@@ -1,4 +1,8 @@
 /* Global Styles */
+section {
+    scroll-margin-top: 80px; 
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -56,6 +60,14 @@ body {
 
 .navbar a:hover::after {
     width: 100%;
+}
+
+.navbar a.active {
+    color: #9b7bc9; /* lighter purple for active section */
+}
+
+.navbar a.active::after {
+    width: 100%; /* show underline for active section */
 }
 
 /* Hide navbar links by default on small screens */
@@ -327,14 +339,39 @@ section {
     }
 }
 
+/* About Section Full Width */
+.about-section {
+    width: 100%;
+    padding: 2rem 5%; /* gives some space on sides */
+    box-sizing: border-box;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* space between image and text */
+    max-width: 1800px; 
+    width: 100%;
+    margin: 0; 
+    align-items: flex-start;
+    justify-content: flex-start; 
+    padding-left: 0.5%; 
+}
+
+
+.about-text {
+    flex: 1 1 0; /* allows it to grow */
+    max-width: 900px; /* increase max width */
+}
+
 .profile-container {
     text-align: center;
     margin-bottom: 3rem;
 }
 
 .profile-pic {
-    width: 160px;
-    height: 160px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #d9c4ed;
@@ -342,19 +379,6 @@ section {
     margin-bottom: 1rem;
 }
 
-.about-wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 20px;
-    flex-wrap: wrap;
-  }
-  
-  
-  .about-text {
-    flex: 1;
-    max-width: 700px;
-  }
   
   .about-text h1 {
     margin-top: 0;
@@ -640,3 +664,25 @@ section {
         padding: 0.5rem 1rem;
     }
 }
+
+/* CTA Button Style */
+.cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.8rem;
+    background-color: #9b7bc9;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    align-self: flex-end; /* moves button to the right */
+}
+
+.cta-button:hover {
+    background-color: #7e5bb5;
+    transform: translateY(-2px);
+}
+
+
+
