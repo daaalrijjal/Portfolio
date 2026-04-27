@@ -424,13 +424,14 @@ section {
     justify-content: space-around;
     position: relative;
     z-index: 1;
+    gap: 30px;
 }
 
 .timeline-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 10%; /* Adjust based on number of items */
+    min-width: 120px;
 }
 
 .timeline-dot {
@@ -446,12 +447,12 @@ section {
 
 .timeline-content {
     text-align: center;
-    padding: 1.2rem;
+    padding: 0.7rem;      /* smaller padding */
     background: white;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     width: 100%;
-    max-width: 200px;
+    max-width: 140px;     /* 🔥 smaller boxes */
     transition: transform 0.3s;
 }
 
@@ -462,13 +463,13 @@ section {
 .timeline-content h3 {
     margin: 0 0 0.5rem 0;
     color: #5c4d7d;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .timeline-content p {
     margin: 0;
     color: #7a6b96;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 /* Responsive adjustments */
@@ -683,6 +684,8 @@ section {
     background-color: #7e5bb5;
     transform: translateY(-2px);
 }
+
+
 
 
 
