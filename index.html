@@ -9,7 +9,9 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-      
+
+<div id="scroll-progress"></div>
+
     <div class="navbar">
         <div class="navbar-inner">
             <a href="#about">About Me</a>
@@ -50,6 +52,27 @@ As I approach graduation, I’m actively exploring opportunities to grow profess
 
 
           
+        <section class="stats-section" data-aos="fade-up" data-aos-duration="1500">
+    <div class="stats-grid">
+        <div class="stat-item" data-target="3.97" data-decimals="2">
+            <div class="stat-number">0</div>
+            <div class="stat-label">GPA</div>
+        </div>
+        <div class="stat-item" data-target="9" data-decimals="0">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item" data-target="8" data-decimals="0">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Research Papers</div>
+        </div>
+        <div class="stat-item" data-target="7" data-decimals="0">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Certifications</div>
+        </div>
+    </div>
+</section>
+
         <section id="education" data-aos="fade-up" data-aos-duration="3000">
     <h2>Education</h2>
     <div class="education-container">
@@ -306,209 +329,227 @@ As I approach graduation, I’m actively exploring opportunities to grow profess
         
         <section id="projects">
             <h2>Projects</h2>
+            <p style="color:#7a6b96; font-size:0.9rem; margin-bottom:1.5rem;">Hover over a card to see details</p>
             <div class="project-grid">
+
                 <!-- 1. Graduation Project -->
                 <div class="project-card project-card--featured" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="project-card-header">
-                        <div class="project-icon"><i class="fas fa-user-secret"></i></div>
-                        <span class="graduation-badge"><i class="fas fa-graduation-cap"></i> Graduation Project</span>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="project-card-header">
+                                <div class="project-icon"><i class="fas fa-user-secret"></i></div>
+                                <span class="graduation-badge"><i class="fas fa-graduation-cap"></i> Graduation Project</span>
+                            </div>
+                            <h3>AegisAI — LLM-Driven Penetration Testing Framework</h3>
+                            <p>An automated AI penetration testing platform that uses LLMs as a red-team agent within a Digital Twin environment to assess and harden AI/ML systems against adversarial attacks.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Key Features</h3>
+                            <ul class="project-features">
+                                <li>Full recon → attack → defence → report pipeline for ML, LLM, RAG, and multimodal targets</li>
+                                <li>Recon: modality detection, RAG/LLM fingerprinting, and Garak scanning</li>
+                                <li>Attack: TextFooler, FGSM, ART, prompt injection, jailbreak, encoding bypass</li>
+                                <li>Defence: adversarial retraining for text (DistilBERT), image (ViT), audio (AST), multimodal (CLIP)</li>
+                                <li>FastAPI REST interface with async scan submission and PDF report generation</li>
+                            </ul>
+                            <a href="https://github.com/daaalrijjal/AegisAI-LLM-Driven-Pentest-Framework" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
-                    <h3>AegisAI — LLM-Driven Penetration Testing Framework</h3>
-                    <div class="project-content">
-                        <p>An automated AI penetration testing platform that uses LLMs as a red-team agent within a Digital Twin environment to assess and harden AI/ML systems against adversarial attacks.</p>
-                        <ul class="project-features">
-                            <li>Full recon → attack → defence → report pipeline for traditional ML, LLM apps, RAG systems, and multimodal targets</li>
-                            <li>Recon: modality detection, RAG/LLM fingerprinting, and Garak vulnerability scanning</li>
-                            <li>Attack: TextFooler, FGSM, ART, prompt injection, jailbreak, and encoding bypass</li>
-                            <li>Defence: adversarial retraining for text (DistilBERT), image (ViT), audio (AST), and multimodal (CLIP)</li>
-                            <li>FastAPI REST interface with async scan submission and PDF security report generation</li>
-                        </ul>
-                        <p>Developed as a graduation project exploring how LLMs can drive automated multimodal adversarial attacks for AI security assessment.</p>
-                    </div>
-                    <a href="https://github.com/daaalrijjal/AegisAI-LLM-Driven-Pentest-Framework" class="github-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
                 </div>
 
                 <!-- 2. Adversarial Robustness CTI -->
                 <div class="project-card" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="project-icon"><i class="fas fa-bug"></i></div>
-                    <h3>Adversarial Robustness in Cyber Threat Intelligence (CTI)</h3>
-                    <div class="project-content">
-                        <p>An applied AI security project focused on improving the robustness of NLP models used for cyber threat intelligence classification.</p>
-                        <ul class="project-features">
-                            <li>Fine-tuned a DistilBERT model for CTI report classification</li>
-                            <li>Implemented FGSM adversarial training to defend against textual perturbation attacks</li>
-                            <li>Evaluated baseline vs adversarially trained models using Clean Accuracy and Macro F1</li>
-                            <li>Measured robustness using Robust Accuracy and Attack Success Rate (ASR)</li>
-                            <li>Applied adaptive defense concepts to enhance model reliability in security-critical environments</li>
-                        </ul>
-                        <p>The project demonstrates how adversarial training can significantly improve the resilience of NLP models deployed in real-world cybersecurity pipelines.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="project-icon"><i class="fas fa-bug"></i></div>
+                            <h3>Adversarial Robustness in Cyber Threat Intelligence (CTI)</h3>
+                            <p>An applied AI security project focused on improving the robustness of NLP models used for cyber threat intelligence classification.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Key Features</h3>
+                            <ul class="project-features">
+                                <li>Fine-tuned a DistilBERT model for CTI report classification</li>
+                                <li>Implemented FGSM adversarial training against textual perturbation attacks</li>
+                                <li>Evaluated models using Clean Accuracy and Macro F1</li>
+                                <li>Measured robustness using Robust Accuracy and Attack Success Rate (ASR)</li>
+                                <li>Applied adaptive defense for security-critical environments</li>
+                            </ul>
+                            <a href="https://github.com/daaalrijjal/Adversarial-Robustness-CTI" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/daaalrijjal/Adversarial-Robustness-CTI" class="github-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
                 </div>
 
                 <!-- 3. Big Data Pipeline CTI -->
                 <div class="project-card" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="project-icon"><i class="fas fa-database"></i></div>
-                    <h3>Adversarial-Resilient Big Data Pipeline for CTI</h3>
-                    <div class="project-content">
-                        <p>A distributed pipeline for processing Cyber Threat Intelligence data using Apache Spark.</p>
-                        <ul class="project-features">
-                            <li>Built a 7-stage pipeline (ETL, anomaly detection, adaptation, ML, and audit)</li>
-                            <li>Processed 11K+ records using Spark and Parquet</li>
-                            <li>Implemented anomaly detection and data cleaning, reducing noise by 50%</li>
-                            <li>Trained a TF-IDF + Logistic Regression model (~82% accuracy)</li>
-                            <li>Evaluated robustness under adversarial conditions</li>
-                        </ul>
-                        <p>This project extends adversarial robustness from model-level to pipeline-level, improving reliability in real-world cybersecurity data systems.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="project-icon"><i class="fas fa-database"></i></div>
+                            <h3>Adversarial-Resilient Big Data Pipeline for CTI</h3>
+                            <p>A distributed pipeline for processing Cyber Threat Intelligence data using Apache Spark, resilient to adversarial data poisoning attacks.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Key Features</h3>
+                            <ul class="project-features">
+                                <li>7-stage pipeline (ETL, anomaly detection, adaptation, ML, and audit)</li>
+                                <li>Processed 11K+ records using Spark and Parquet</li>
+                                <li>Anomaly detection and data cleaning, reducing noise by 50%</li>
+                                <li>TF-IDF + Logistic Regression model (~82% accuracy)</li>
+                                <li>Evaluated robustness under adversarial conditions</li>
+                            </ul>
+                            <a href="https://github.com/daaalrijjal/BigData-Adversarial-Robustness-CTI" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/daaalrijjal/BigData-Adversarial-Robustness-CTI" class="github-link" target="_blank">
-                        <i class="fab fa-github"></i> View Project
-                    </a>
                 </div>
 
                 <!-- 4. SecureTwin -->
                 <div class="project-card" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
-                    <h3>SecureTwin Cybersecurity Digital Twin</h3>
-                    <div class="project-content">
-                        <p>A proactive cybersecurity testing platform that enables enterprises to optimize security defenses through:</p>
-                        <ul class="project-features">
-                            <li>Real-time attack simulation with 5+ predefined attack types</li>
-                            <li>AI-driven threat intelligence and dynamic defense adjustments</li>
-                            <li>Digital twin network modeling for risk-free testing</li>
-                            <li>Compliance tracking with GDPR and ISO 27001 standards</li>
-                            <li>Role-based access control for secure system management</li>
-                        </ul>
-                        <p>The application achieved 10,000 node scalability with 100ms latency for real-time responses during testing, demonstrating robust performance for enterprise security needs.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
+                            <h3>SecureTwin Cybersecurity Digital Twin</h3>
+                            <p>A proactive cybersecurity testing platform that enables enterprises to optimize security defenses through digital twin network modeling.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Key Features</h3>
+                            <ul class="project-features">
+                                <li>Real-time attack simulation with 5+ predefined attack types</li>
+                                <li>AI-driven threat intelligence and dynamic defense adjustments</li>
+                                <li>Digital twin network modeling for risk-free testing</li>
+                                <li>Compliance tracking with GDPR and ISO 27001</li>
+                                <li>10,000 node scalability with 100ms response latency</li>
+                            </ul>
+                            <a href="https://github.com/daaalrijjal/SecureTwin-Cybersecurity-Digital-Twin-Platform" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/daaalrijjal/SecureTwin-Cybersecurity-Digital-Twin-Platform" class="github-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
                 </div>
 
                 <!-- 5. IoT -->
                 <div class="project-card" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>IoT Cyber Attack Detection Using ML</h3>
-                    <div class="project-content">
-                        <p>Machine learning-based Intrusion Detection System (IDS) for IoT networks featuring:</p>
-                        <ul class="project-features">
-                            <li>Data preprocessing (missing value imputation, normalization)</li>
-                            <li>Dimensionality reduction with PCA</li>
-                            <li>Class balancing using SMOTE</li>
-                            <li>Multiple model training (Random Forest, SVM, XGBoost)</li>
-                            <li>95% accuracy in attack detection</li>
-                        </ul>
-                        <p>The system demonstrates how ML can provide scalable security solutions for vulnerable IoT ecosystems.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>IoT Cyber Attack Detection Using ML</h3>
+                            <p>Machine learning-based Intrusion Detection System (IDS) for IoT networks, achieving 95% accuracy in attack detection.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Key Features</h3>
+                            <ul class="project-features">
+                                <li>Data preprocessing: missing value imputation and normalization</li>
+                                <li>Dimensionality reduction with PCA</li>
+                                <li>Class balancing using SMOTE</li>
+                                <li>Multiple model training: Random Forest, SVM, XGBoost</li>
+                                <li>95% accuracy in attack detection</li>
+                            </ul>
+                            <a href="https://github.com/daaalrijjal/Iot-Cyber-Attack-Detection-Using-ML/blob/main/README.md" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/daaalrijjal/Iot-Cyber-Attack-Detection-Using-ML/blob/main/README.md" class="github-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
                 </div>
 
                 <!-- 6. Student Performance -->
                 <div class="project-card" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>Predicting Student Performance with ML</h3>
-                    <div class="project-content">
-                        <p>Data science project aimed at predicting secondary school students' final grades (G3) using demographic, academic, and behavioral factors.</p>
-                        <ul class="project-features">
-                            <li>Dataset of 1,044 students from two Portuguese schools</li>
-                            <li>Preprocessing: Label encoding, feature scaling, and train-test split</li>
-                            <li>Exploratory Data Analysis: Correlation heatmaps, feature distribution</li>
-                            <li>Model training: Linear Regression and Random Forest Regressor</li>
-                            <li>Evaluation metrics: MAE, RMSE, and R² Score</li>
-                        </ul>
-                        <p>Results showed that prior grades (G1, G2) were the most significant predictors of final performance. The project offers insights to support educational policy and early intervention strategies.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h3>Predicting Student Performance with ML</h3>
+                            <p>Data science project predicting secondary school students' final grades using demographic, academic, and behavioral factors.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Key Features</h3>
+                            <ul class="project-features">
+                                <li>Dataset of 1,044 students from two Portuguese schools</li>
+                                <li>Preprocessing: label encoding, feature scaling, train-test split</li>
+                                <li>EDA: correlation heatmaps and feature distributions</li>
+                                <li>Models: Linear Regression and Random Forest Regressor</li>
+                                <li>Evaluation: MAE, RMSE, and R² Score</li>
+                            </ul>
+                            <a href="https://github.com/daaalrijjal/CS3072_Final_Project" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/daaalrijjal/CS3072_Final_Project" class="github-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
                 </div>
 
                 <!-- 7. Virtual Art Gallery -->
                 <div class="project-card" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="project-icon"><i class="fas fa-code"></i></div>
-                    <h3>Virtual Art Gallery Website</h3>
-                    <div class="project-content">
-                        <p>Museo is a dynamic virtual art gallery designed to provide an engaging online experience for art enthusiasts. Key features include:</p>
-                        <ul class="project-features">
-                            <li>Responsive design with navigation bar and drop-down menu</li>
-                            <li>Six distinct art categories showcasing renowned pieces</li>
-                            <li>Detailed artist pages and interactive search functionality</li>
-                            <li>Built with HTML, CSS, JavaScript, Bootstrap and Font Awesome</li>
-                            <li>Full CRUD system with secure admin dashboard</li>
-                        </ul>
-                        <p>This project enhanced our skills in creating interactive, database-driven websites despite challenges in database connectivity and responsive design.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="project-icon"><i class="fas fa-code"></i></div>
+                            <h3>Virtual Art Gallery Website</h3>
+                            <p>Museo — a dynamic virtual art gallery providing an engaging online experience with six art categories and interactive search.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Key Features</h3>
+                            <ul class="project-features">
+                                <li>Responsive design with navigation and drop-down menus</li>
+                                <li>Six distinct art categories showcasing renowned pieces</li>
+                                <li>Detailed artist pages and interactive search</li>
+                                <li>Built with HTML, CSS, JavaScript, Bootstrap, Font Awesome</li>
+                                <li>Full CRUD system with secure admin dashboard</li>
+                            </ul>
+                            <a href="https://github.com/daaalrijjal/Virtual-Art-Gallery" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/daaalrijjal/Virtual-Art-Gallery" class="github-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
                 </div>
 
                 <!-- 8. Network Design -->
                 <div class="project-card" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="project-icon"><i class="fas fa-network-wired"></i></div>
-                    <h3>Network Design for Educational Institution</h3>
-                    <div class="project-content">
-                        <p>A comprehensive network plan for a medium-sized educational institution with:</p>
-                        <ul class="project-features">
-                            <li>Three distinct campuses (North, South, Central) each with dedicated VLANs</li>
-                            <li>Centralized switches, routers and access points</li>
-                            <li>Administrative hub with inter-VLAN communication</li>
-                            <li>DHCP and DNS services integration</li>
-                            <li>VLAN segmentation for enhanced security</li>
-                        </ul>
-                        <p>The design optimizes technological infrastructure to support academic and administrative functions through secure, scalable networking.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+                            <h3>Network Design for Educational Institution</h3>
+                            <p>A comprehensive network plan for a medium-sized educational institution spanning three campuses with secure VLAN segmentation.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Key Features</h3>
+                            <ul class="project-features">
+                                <li>Three campuses (North, South, Central) with dedicated VLANs</li>
+                                <li>Centralized switches, routers, and access points</li>
+                                <li>Administrative hub with inter-VLAN communication</li>
+                                <li>DHCP and DNS services integration</li>
+                                <li>VLAN segmentation for enhanced security</li>
+                            </ul>
+                            <a href="https://github.com/daaalrijjal/Educational-institution-network" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/daaalrijjal/Educational-institution-network" class="github-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
                 </div>
 
                 <!-- 9. To-Do-List -->
                 <div class="project-card" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>To-Do-List Application</h3>
-                    <div class="project-content">
-                        <p>A digital solution for task management and time organization featuring:</p>
-                        <ul class="project-features">
-                            <li>Minimalist and user-friendly interface</li>
-                            <li>Support for simple, deadline-driven, and recurring tasks</li>
-                            <li>Task organization into customizable categories</li>
-                            <li>Mark tasks as completed functionality</li>
-                            <li>Edit or delete tasks and categories</li>
-                        </ul>
-                        <p>The application focuses on streamlined task management to enhance productivity and organizational efficiency.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <h3>To-Do-List Application</h3>
+                            <p>A digital solution for task management and time organization with a minimalist, user-friendly interface.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Key Features</h3>
+                            <ul class="project-features">
+                                <li>Minimalist and user-friendly interface</li>
+                                <li>Support for simple, deadline-driven, and recurring tasks</li>
+                                <li>Task organization into customizable categories</li>
+                                <li>Mark tasks as completed functionality</li>
+                                <li>Edit or delete tasks and categories</li>
+                            </ul>
+                            <a href="https://github.com/daaalrijjal/to-do-list" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/daaalrijjal/to-do-list" class="github-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
                 </div>
-
-                <!-- <div class="project-card" data-aos="fade-up" data-aos-duration="1200">
-    <div class="project-icon"><i class="fas fa-language"></i></div>
-    <h3>NLP Labs Collection — Practical Natural Language Processing</h3>
-    <div class="project-content">
-        <p>A collection of hands-on NLP experiments applying machine learning and deep learning techniques to real-world text datasets.</p>
-        <ul class="project-features">
-            <li>Text preprocessing: tokenization, stemming, lemmatization, stop-word removal</li>
-            <li>Representation methods: BoW, TF-IDF, Word2Vec</li>
-            <li>Sentiment analysis & topic modeling</li>
-            <li>Classification with Logistic Regression, SVM, and Neural Networks</li>
-            <li>Evaluation: Accuracy, Precision, Recall, F1-Score, Confusion Matrix</li>
-        </ul>
-        <p>These labs strengthened my expertise in Python-based NLP and model evaluation.</p>
-    </div>
-    <a href="https://github.com/daaalrijjal/NLP-Labs" class="github-link" target="_blank">
-        <i class="fab fa-github"></i> View on GitHub
-    </a>
-</div> -->
-
 
             </div>
         </section>
@@ -715,11 +756,44 @@ As I approach graduation, I’m actively exploring opportunities to grow profess
     document.addEventListener("DOMContentLoaded", function() {
         const toggleButton = document.querySelector('.navbar-toggle');
         const navbarLinks = document.querySelector('.navbar-inner');
-    
         toggleButton.addEventListener('click', function() {
-            navbarLinks.classList.toggle('active'); // Toggle the "active" class
+            navbarLinks.classList.toggle('active');
         });
     });
+</script>
+
+<script>
+    // Scroll progress bar
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+    });
+
+    // Stat counters with IntersectionObserver
+    const statItems = document.querySelectorAll('.stat-item');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const target = parseFloat(el.dataset.target);
+            const decimals = parseInt(el.dataset.decimals);
+            const numEl = el.querySelector('.stat-number');
+            const duration = 1600;
+            const start = performance.now();
+            function tick(now) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                numEl.textContent = (eased * target).toFixed(decimals);
+                if (progress < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+            counterObserver.unobserve(el);
+        });
+    }, { threshold: 0.5 });
+    statItems.forEach(item => counterObserver.observe(item));
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
