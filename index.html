@@ -52,26 +52,6 @@ As I approach graduation, I’m actively exploring opportunities to grow profess
 
 
           
-        <section class="stats-section" data-aos="fade-up" data-aos-duration="1500">
-    <div class="stats-grid">
-        <div class="stat-item" data-target="3.97" data-decimals="2">
-            <div class="stat-number">0</div>
-            <div class="stat-label">GPA</div>
-        </div>
-        <div class="stat-item" data-target="9" data-decimals="0">
-            <div class="stat-number">0</div>
-            <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat-item" data-target="8" data-decimals="0">
-            <div class="stat-number">0</div>
-            <div class="stat-label">Research Papers</div>
-        </div>
-        <div class="stat-item" data-target="7" data-decimals="0">
-            <div class="stat-number">0</div>
-            <div class="stat-label">Certifications</div>
-        </div>
-    </div>
-</section>
 
         <section id="education" data-aos="fade-up" data-aos-duration="3000">
     <h2>Education</h2>
@@ -771,29 +751,6 @@ As I approach graduation, I’m actively exploring opportunities to grow profess
         progressBar.style.width = ((scrollTop / docHeight) * 100) + '%';
     });
 
-    // Stat counters with IntersectionObserver
-    const statItems = document.querySelectorAll('.stat-item');
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const el = entry.target;
-            const target = parseFloat(el.dataset.target);
-            const decimals = parseInt(el.dataset.decimals);
-            const numEl = el.querySelector('.stat-number');
-            const duration = 1600;
-            const start = performance.now();
-            function tick(now) {
-                const elapsed = now - start;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                numEl.textContent = (eased * target).toFixed(decimals);
-                if (progress < 1) requestAnimationFrame(tick);
-            }
-            requestAnimationFrame(tick);
-            counterObserver.unobserve(el);
-        });
-    }, { threshold: 0.5 });
-    statItems.forEach(item => counterObserver.observe(item));
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
